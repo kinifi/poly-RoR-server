@@ -1,0 +1,2 @@
+json.extract! poly, :id, :name, :description, :docs, :bugtracker, :downloads, :license, :author, :submittedby, :website, :gitsshurl, :repotype, :created_at, :updated_at
+json.url poly_url(poly, format: :json)

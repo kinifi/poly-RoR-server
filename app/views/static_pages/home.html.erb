@@ -1,0 +1,15 @@
+<div class="home__image-wrap">
+  <div class="center jumbotron">
+    <br>
+    <h1>Poly</h1>
+    <%= image_tag("gpmlogo.png", height: '128', width: '128') %>
+    <h2>Find, Install, and Create Your Own Poly's</h2>
+    <h5>Poly is a engine agnostic library of code snippets, editors, full tools and more! In one location for game devs.</h5>
+    <br>
+
+    <%= form_tag('/search', :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Ex: Unity, Gamemaker" %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
+    </div>
+  </div>

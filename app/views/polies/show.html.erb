@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+<h1>
+  <%= @poly.name %>
+</h1>
+<hr>
+
+<h5>
+  <%= @poly.description %>
+</h5>
+<hr>
+
+<!-- <p>
+  <strong>Downloads:</strong>
+  <%= @poly.downloads %>
+</p> -->
+
+<p>
+  <strong>Website:</strong>
+  <%= link_to @poly.website, @poly.website %>
+</p>
+
+<p>
+  <strong>Bugtracker:</strong>
+  <%= link_to @poly.bugtracker, @poly.bugtracker %>
+</p>
+
+<p>
+  <strong>Docs:</strong>
+  <%= link_to @poly.docs, @poly.docs %>
+</p>
+
+<p>
+  <strong>License:</strong>
+  <%= @poly.license %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @poly.author %>
+</p>
+
+<p>
+  <strong>Submitted By:</strong>
+  <%= @poly.submittedby %>
+</p>
+<hr>
+
+<p>
+  <strong>Repotype:</strong>
+  <%= @poly.repotype %>
+</p>
+
+<p>
+  <strong>HTTPS URL:</strong>
+  <%= @poly.gitsshurl %>
+</p>
+
+<hr>
+
+<p>Note: If a Poly needs to be deleted please contact @kinifi</p>
+<%= link_to 'Edit', edit_poly_path(@poly) %> |
+<%= link_to 'Back To List', polies_path %>

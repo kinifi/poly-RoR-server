@@ -1,0 +1,67 @@
+<%= form_for(poly) do |f| %>
+  <% if poly.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poly.errors.count, "error") %> prohibited this poly from being saved:</h2>
+
+      <ul>
+      <% poly.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Name: The name users will search for" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "Description: What is this poly? Maximum 140 Characters" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :docs, "Documentation URL: (Optional)" %>
+    <%= f.url_field :docs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bugtracker, "Bug Tracker: Example - Github Issues URL (Optional)" %>
+    <%= f.url_field :bugtracker %>
+  </div>
+
+  <div class="field">
+    <%= f.label :license, "License: (Optional)" %>
+    <%= f.text_field :license %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author, "Author: " %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :submittedby, "Submitted By: " %>
+    <%= f.text_field :submittedby %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website, "Website: " %>
+    <%= f.url_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gitsshurl, "HTTPS URL: Example - https://github.com/kinifi/poly-server.git (Optional)" %>
+    <%= f.text_field :gitsshurl %>
+  </div>
+
+  <div class="field">
+    <%= f.label :repotype, "Repo Type: git, mercurial, svn, download" %>
+    <%= f.text_field :repotype %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  docs: MyString
+  bugtracker: MyString
+  downloads: MyString
+  license: MyString
+  author: MyString
+  submittedby: MyString
+  website: MyString
+  gitsshurl: MyString
+  repotype: MyString
+
+two:
+  name: MyString
+  description: MyString
+  docs: MyString
+  bugtracker: MyString
+  downloads: MyString
+  license: MyString
+  author: MyString
+  submittedby: MyString
+  website: MyString
+  gitsshurl: MyString
+  repotype: MyString
