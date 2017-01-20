@@ -1,7 +1,25 @@
-<div class="home__image-wrap">
-  <div class="center jumbotron">
-  <h1>Sign Up</h1>
-  <h5>Becoming a Poly.gg user will give you access to creating your own Poly's to share with others</h5>
-  <%= render 'form', user: @user %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <br>
+    <h2>Sign Up</h2>
+    <h5>Becoming a Poly.gg user will give you access to creating your own Poly's to share with others</h5>
+
+    <%= form_for(@user, url: signup_path) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <br>
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
