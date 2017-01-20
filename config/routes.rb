@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/search', to: 'polies#index'
   get '/polies', to: 'polies#index'
   get '/polies/new', to: 'polies#new'
+  get '/signup', to: 'users#new'
 
+  resources :users
   resources :polies
 end
