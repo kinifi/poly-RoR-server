@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Poly's</h1>
-<br>
 <hr>
 
 <table id="polytable">
@@ -13,23 +12,20 @@
       <br>
       <tr>
         <td id="website"><%= poly.description %></td>
-        <!-- <td><%= poly.docs %></td>
-        <td><%= poly.bugtracker %></td> -->
-        <!-- <td><%= poly.downloads %></td> -->
-        <!-- <td><%= poly.license %></td>
-        <td><%= poly.author %></td>
-        <td><%= poly.submittedby %></td> -->
-        <!-- <td id="website"><%= poly.website %></td> -->
-        <!-- <td><%= poly.gitsshurl %></td>
-        <td><%= poly.repotype %></td> -->
         <td id="website"><%= link_to 'Show Info', poly %></td>
-        <!-- <td><%= link_to 'Edit', edit_poly_path(poly) %></td> -->
-        <!-- <td><%= link_to 'Destroy', poly, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <!-- is the user logged in and the poly created by the logged in user? then allow them to edit it -->
+        <%= if logged_in? && current_user.name == poly.submittedby %>
+        <td><%= link_to 'Edit', edit_poly_path(poly) %></td>
+        <% end %>
+
+        <!-- Only show these two options if you are logged in and an admin -->
+        <% if logged_in? && current_user.admin %>
+        <td><%= link_to 'Edit', edit_poly_path(poly) %></td>
+        <td><%= link_to 'Destroy', poly, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
 
 <!-- <%= link_to 'Create New Poly', new_poly_path %> -->
