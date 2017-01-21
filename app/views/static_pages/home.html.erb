@@ -5,11 +5,15 @@
     <%= image_tag("gpmlogo.png", height: '128', width: '128') %>
     <h2>Find, Install, and Create Your Own Poly's</h2>
     <h5>Poly is a engine agnostic library of code snippets, editors, full tools and more! In one location for game devs.</h5>
+    <h5>
+      <%= link_to "View The Poly's Submitted By The Community", polies_path %>
+    </h5>
+
     <br>
 
     <%= form_tag('/search', :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Ex: Unity, Gamemaker" %>
-        <%= submit_tag "Search", :name => nil %>
-      <% end %>
-    </div>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
   </div>
+</div>

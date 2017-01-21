@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= f.label :submittedby, "Submitted By: " %>
-    <%= f.text_field :submittedby %>
+    <%= f.text_field :submittedby, :value => current_user.name, disabled: true %>
   </div>
 
   <div class="field">

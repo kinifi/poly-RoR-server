@@ -1,0 +1,42 @@
+<h1>Editing User</h1>
+
+<%= form_for(@user) do |f| %>
+
+  <br>
+  <hr>
+
+  <div class="field">
+    <%= f.label :name, "name:" %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Email:" %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Password:" %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :passwordconfirmation, "Password:" %>
+    <%= f.password_field :passwordconfirmation, class: 'form-control' %>
+  </div>
+
+  <% if current_user.admin %>
+    <div class="field">
+      <%= f.label :admin, "Admin:" %>
+      <%= f.check_box :admin, class: 'form-control' %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Update", class: "btn btn-primary"  %>
+  </div>
+
+<% end %>
+
+<!-- # <%= link_to 'Show', @user %> |
+# <%= link_to 'Back', users_path %> -->
