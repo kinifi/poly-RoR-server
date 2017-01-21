@@ -13,11 +13,6 @@
       <tr>
         <td id="website"><%= poly.description %></td>
         <td id="website"><%= link_to 'Show Info', poly %></td>
-        <!-- is the user logged in and the poly created by the logged in user? then allow them to edit it -->
-        <%= if logged_in? && current_user.name == poly.submittedby %>
-        <td><%= link_to 'Edit', edit_poly_path(poly) %></td>
-        <% end %>
-
         <!-- Only show these two options if you are logged in and an admin -->
         <% if logged_in? && current_user.admin %>
         <td><%= link_to 'Edit', edit_poly_path(poly) %></td>
