@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 $gray-medium-light: #eaeaea;
 $white: #FFFFFF;
@@ -40,12 +41,14 @@ th, td {
 #websitetitle {
   font-size: 25px;
   font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
   // font-style: italic;
   // padding-bottom: 10px;
 }
 
 #website {
     font-size: 15px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .jumbotron {
@@ -120,6 +123,7 @@ footer {
     li {
       float: left;
       margin-left: 15px;
+      font-family: 'Work Sans', sans-serif;
     }
   }
 }
