@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/polies', to: 'polies#index'
   get '/polies/new', to: 'polies#new'
   #user creation and login
+  get '/listusers', to: 'users#index'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get    '/login',   to: 'sessions#new'

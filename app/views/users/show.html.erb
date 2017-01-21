@@ -1,7 +1,59 @@
 <p id="notice"><%= notice %></p>
 
+<hr>
+<br>
+
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
-  <%= current_user.name %>
 </p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= form_for(@user) do |f| %>
+
+  <hr>
+
+  <p>Update Current User Account</p>
+
+  <div class="field">
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Email:" %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Password:" %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :passwordconfirmation, " Confirm Password:" %>
+    <%= f.password_field :passwordconfirmation, class: 'form-control' %>
+  </div>
+
+<!-- Make current user admin? -->
+  <% if current_user.admin %>
+    <div class="field">
+      <%= f.label :admin, "Moderator:" %>
+      <%= f.check_box :admin %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Update", class: "btn btn-primary"  %>
+  </div>
+
+<% end %>
+
+
+<hr>
+<%= link_to 'Delete Account - This Cannot Be Undone!', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+<hr>

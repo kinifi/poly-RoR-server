@@ -11,6 +11,9 @@
         <% else %>
           <li><%= link_to "Login / Sign Up", login_path %></li>
         <% end %>
+        <% if logged_in? && current_user.admin %>
+          <li><%= link_to "List All Users", listusers_path %></li>
+        <% end %>
         <!-- display these links no matter what -->
         <li><%= link_to "View All Poly's", polies_path %></li>
         <li><%= link_to "Help", help_path %></li>
