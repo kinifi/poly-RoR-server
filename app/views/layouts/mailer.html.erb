@@ -8,6 +8,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <h1>Welcome to example.com, <%= @user.name %></h1>
+    <p>
+      You have successfully signed up to Poly.gg
+      your login information is: <%= @user.email %>.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks for joining! Create, and Share your Poly's with others!</p>
   </body>
 </html>
