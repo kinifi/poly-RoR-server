@@ -1,9 +1,9 @@
-<h1>Login</h1>
-
-<h5>Becoming a Poly.gg user will give you access to creating your own Poly's to share with others</h5>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <h1>Login</h1>
+    <h5>Becoming a Poly.gg user will give you access to creating your own Poly's to share with others</h5>
+
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :email %>
@@ -14,7 +14,6 @@
       <br>
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
-
     <p>New user? <%= link_to "Sign up now to create and share your own Poly's!", signup_path %></p>
   </div>
 </div>
