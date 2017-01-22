@@ -18,34 +18,28 @@
     <tr>
       <td id="website">Issue Tracker: <%= link_to @poly.bugtracker, @poly.bugtracker %></td>
     </tr>
+    <tr>
+      <td id="website">Documentation: <%= link_to @poly.docs, @poly.docs %></td>
+    </tr>
+    <tr>
+      <td id="website">License: <%= @poly.license %></td>
+    </tr>
+    <tr>
+      <td id="website">Author: <%= @poly.author %></td>
+    </tr>
+    <tr>
+      <td id="website">Submitted By: <%= @poly.submittedby %></td>
+    </tr>
+    <tr>
+      <td id="website">Repo Type: <%= @poly.repotype %></td>
+    </tr>
+    <tr>
+      <td id="website">HTTPS URL: <%= @poly.gitsshurl %></td>
+    </tr>
+
   </tbody>
 </table>
 
-<p>
-  <strong>Docs:</strong>
-  <%= link_to @poly.docs, @poly.docs %>
-</p>
-<p>
-  <strong>License:</strong>
-  <%= @poly.license %>
-</p>
-<p>
-  <strong>Author:</strong>
-  <%= @poly.author %>
-</p>
-<p>
-  <strong>Submitted By:</strong>
-  <%= @poly.submittedby %>
-</p>
-<p>
-  <strong>HTTPS URL:</strong>
-  <%= @poly.gitsshurl %>
-</p>
-
-<p>
-  <strong>Repotype:</strong>
-  <%= @poly.repotype %>
-</p>
 <hr>
 
 <iframe src="<%= @poly.website %>" width="100%" height="800" frameborder="0">
