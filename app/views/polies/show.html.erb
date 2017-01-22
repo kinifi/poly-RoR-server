@@ -10,15 +10,15 @@
 </h5>
 <hr>
 
-<p>Poly Informoation: </p>
-<p>
-  <strong>Website:</strong>
-  <%= link_to @poly.website, @poly.website %>
-</p>
-<p>
-  <strong>Bugtracker:</strong>
-  <%= link_to @poly.bugtracker, @poly.bugtracker %>
-</p>
+<table id="polytable">
+  <tbody>
+    <tr>
+      <td id="website">Website: <%= link_to @poly.website, @poly.website %></td>
+      <td id="website">Issue Tracker: <%= link_to @poly.bugtracker, @poly.bugtracker %></td>
+    </tr>
+  </tbody>
+</table>
+
 <p>
   <strong>Docs:</strong>
   <%= link_to @poly.docs, @poly.docs %>
