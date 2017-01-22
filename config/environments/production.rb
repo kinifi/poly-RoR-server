@@ -64,7 +64,7 @@ Rails.application.configure do
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
    :address              => "mail.gandi.net",
-   :port                 => 25,
+   :port                 => 465,
    :user_name            => ENV['support@poly.gg'],
    :password             => ENV['UPaxWZyhmiYDYRMP2QYv3JyJ'],
    :authentication       => "plain",
