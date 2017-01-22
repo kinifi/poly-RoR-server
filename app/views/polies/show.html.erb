@@ -10,48 +10,28 @@
 </h5>
 <hr>
 
+<p>Poly Informoation: </p>
 <p>
   <strong>Website:</strong>
   <%= link_to @poly.website, @poly.website %>
-</p>
-
-<iframe src="<%= @poly.website %>" width="100%" height="800" frameborder="0">
-
-<p>
   <strong>Bugtracker:</strong>
   <%= link_to @poly.bugtracker, @poly.bugtracker %>
-</p>
-
-<p>
   <strong>Docs:</strong>
   <%= link_to @poly.docs, @poly.docs %>
-</p>
-
-<p>
   <strong>License:</strong>
   <%= @poly.license %>
-</p>
-
-<p>
   <strong>Author:</strong>
   <%= @poly.author %>
-</p>
-
-<p>
   <strong>Submitted By:</strong>
   <%= @poly.submittedby %>
-</p>
-<hr>
-
-<p>
+  <strong>HTTPS URL:</strong>
+  <%= @poly.gitsshurl %>
   <strong>Repotype:</strong>
   <%= @poly.repotype %>
 </p>
+<hr>
 
-<p>
-  <strong>HTTPS URL:</strong>
-  <%= @poly.gitsshurl %>
-</p>
+<iframe src="<%= @poly.website %>" width="100%" height="800" frameborder="0">
 
 <hr>
 
