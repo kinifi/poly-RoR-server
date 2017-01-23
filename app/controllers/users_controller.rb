@@ -27,6 +27,17 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to Poly!"
+      #the postmark email method
+      # Create an instance of Postmark::ApiClient
+      client = Postmark::ApiClient.new('7dc43c98-3a0d-4023-b443-f10742390a3c')
+      client.deliver_with_template(from: 'support@poly.gg',
+                               to: @user.name + ' <' + @user.email + '>',
+                               template_id: 1250781,
+                               template_model: {
+                                 name: @user.name,
+                                 login_url: 'poly.gg/signup',
+                                 username: @user.name
+                               })
       redirect_to @user
     else
       render 'new'
@@ -57,6 +68,7 @@ class UsersController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
