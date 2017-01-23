@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.label :name, "Name: The name users will search for" %>
     <%= f.text_field :name %>
@@ -19,6 +20,12 @@
   <div class="field">
     <%= f.label :description, "Description: What is this poly? Maximum 140 Characters" %>
     <%= f.text_area :description %>
+  </div>
+
+  <p>Note: Poly hosts Github/Bitbucket links. Do not write code directly in this box. See the About Page for more information</p>
+  <div class="field">
+    <%= f.label :website, "Website: " %>
+    <%= f.url_field :website %>
   </div>
 
   <div class="field">
@@ -44,21 +51,6 @@
   <div class="field">
     <%= f.label :submittedby, "Submitted By: " %>
     <%= f.text_field :submittedby, value: current_user.name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :website, "Website: " %>
-    <%= f.url_field :website %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gitsshurl, "HTTPS URL: Example - https://github.com/kinifi/poly-server.git (Optional)" %>
-    <%= f.text_field :gitsshurl %>
-  </div>
-
-  <div class="field">
-    <%= f.label :repotype, "Repo Type: git, mercurial, svn, download" %>
-    <%= f.text_field :repotype %>
   </div>
 
   <div class="actions">
