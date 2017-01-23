@@ -84,6 +84,8 @@ GEM
     nokogiri (1.7.0.1-x86-mingw32)
       mini_portile2 (~> 2.1.0)
     pg (0.19.0-x64-mingw32)
+    pony (1.11)
+      mail (>= 2.0)
     puma (3.6.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -159,6 +161,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   pg
+  pony (~> 1.11)
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
