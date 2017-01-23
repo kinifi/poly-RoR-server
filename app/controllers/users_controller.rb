@@ -27,7 +27,6 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to Poly!"
-      Pony.mail(:to => @user.email, :from => 'support@poly.gg', :subject => 'Welcome To Poly.gg', :body => 'Hello, Thank you for signing up for Poly! Now Get out there and create a new poly and share it!')
       redirect_to @user
     else
       render 'new'
