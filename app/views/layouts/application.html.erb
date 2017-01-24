@@ -11,8 +11,9 @@
   <body>
     <%= render 'layouts/analytics' %>
     <%= render 'layouts/header' %>
+    <%= render 'layouts/basicinfo' %>
     <div class="container">
-      <%= render 'layouts/basicinfo' %>
+      <%= yield %>
     </div>
   </body>
 </html>
