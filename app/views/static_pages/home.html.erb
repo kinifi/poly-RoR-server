@@ -12,17 +12,14 @@
     <br>
 
     <%= form_tag('/search', :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Ex: Unity, Gamemaker" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Ex: Unity, Gamemaker", id: "searchbar" %>
       <%= submit_tag "Search", :name => nil %>
     <% end %>
     <br>
     <div class="row">
       <div class="col-md-4">
-        <h4>Open Source</h4>
+        <h4>Made By Game Developers For Game Developers</h4>
         <h5>Poly.gg is a Game Developer community code snippet hosting website. Instantly publish your Poly's and then install them. Use the search bar and find out more about available Polys. Become a contributor and improve the site yourself.</h5>
-      </div>
-      <div class="col-md-4">
-        <h4>We Need Your Help</h4>
         <h5>We need your help to keep Poly.gg running smoothly and free for everyone to use. Become a member today and start sharing, using Poly.gg</h5>
       </div>
       <div class="col-md-4">
