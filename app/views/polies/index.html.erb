@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div id="spacer">
 
+  <p id="notice"><%= notice %></p>
 
-<h1>Poly's</h1>
-<hr>
+  <h1>Poly's</h1>
+  <hr>
 
-<table id="polytable">
-  <tbody>
-    <tr>
-      <td>Poly Count: <%= @polies.length %> | Sign Up and Create Your Own Poly! </td>
-    </tr>
-    <% @polies.each do |poly| %>
+  <table id="polytable">
+    <tbody>
       <tr>
-        <td id="websitetitle" colspan="2"><%= poly.name %></td>
+        <td>Poly Count: <%= @polies.length %> | Sign Up and Create Your Own Poly! </td>
       </tr>
-      <tr>
-        <td id="website"><%= poly.description %></td>
-        <td id="website"><%= link_to 'Show Info', poly %></td>
-        <!-- Only show these two options if you are logged in and an admin -->
-        <% if logged_in? && current_user.admin %>
-        <td><%= link_to 'Edit', edit_poly_path(poly) %></td>
-        <td><%= link_to 'Destroy', poly, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% @polies.each do |poly| %>
+        <tr>
+          <td id="websitetitle" colspan="2"><%= poly.name %></td>
+        </tr>
+        <tr>
+          <td id="website"><%= poly.description %></td>
+          <td id="website"><%= link_to 'Show Info', poly %></td>
+          <!-- Only show these two options if you are logged in and an admin -->
+          <% if logged_in? && current_user.admin %>
+          <td><%= link_to 'Edit', edit_poly_path(poly) %></td>
+          <td><%= link_to 'Destroy', poly, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<!-- <%= link_to 'Create New Poly', new_poly_path %> -->
+</div>
