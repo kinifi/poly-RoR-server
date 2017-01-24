@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
   get '/search', to: 'polies#index'
+  get '/support', to: 'support_page#support'
   #poly creation and listing
   get '/polies', to: 'polies#index'
   get '/polies/new', to: 'polies#new'
