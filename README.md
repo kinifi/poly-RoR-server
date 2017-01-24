@@ -1,5 +1,5 @@
 # Poly - Server
-## A Engine Agnostic Game Package Manager
+## A Engine Agnostic code snippet host
 
 ![Game Package Manager](http://i.imgur.com/dU0w44o.png)
 
@@ -14,26 +14,9 @@ This is a package manager made for game devs. Most game devs just want to easily
 
 ---
 
-##How does this work?
-
-The first implementation will store gpm.json files into a database the contains a bunch of information but more importantly Git Repo links. When you type commands like
-
-```
-gpm install steamworksdotnet
-```
-
-The assets for that git repo are stored on github, bitbucket, or whatever else. Soon to be on our own servers.
-
----
 
 ##What is a Poly?
 
 Poly - a package that contains assets to be consumed in a game project.
-
----
-
-##What if I dont have internet?
-
-You can install *polys* locally to a general GPM directory on your computer with the ```gpm install steamworksdotnet -g``` command. This will save that *poly* for later use. So incase you aren't connected to the internet or have slow internet you can call ```gpm install steamworksdotnet -l```
 
 ---
