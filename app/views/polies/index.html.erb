@@ -5,7 +5,9 @@
 
 <table id="polytable">
   <tbody>
-    <p>Poly Count: <%= @polies.length %> | <%= @polies[2] %></p>
+    <tr>
+      <td>Poly Count: <%= @polies.length %></td>
+    </tr>
     <% @polies.each do |poly| %>
       <tr>
         <td id="websitetitle" colspan="2"><%= poly.name %></td>
