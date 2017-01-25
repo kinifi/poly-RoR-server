@@ -25,6 +25,9 @@
         </tr>
       <% end %>
     </tbody>
+    <%= if @polies.length == 0 %>
+      <h2>No Poly's Found! Login and make one!! \(ツ)/! </h2>
+    <% end %>
   </table>
 
 </div>
