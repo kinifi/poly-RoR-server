@@ -1,25 +1,27 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <br>
-    <h2>Sign Up</h2>
-    <h5>Becoming a Poly.gg user will give you access to creating your own Poly's to share with others</h5>
-
-    <%= form_for(@user, url: signup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :passwordconfirmation, class: 'form-control' %>
+<div id="spacer">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
       <br>
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+      <h2>Sign Up</h2>
+      <h5>Becoming a Poly.gg user will give you access to creating your own Poly's to share with others</h5>
+
+      <%= form_for(@user, url: signup_path) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :passwordconfirmation, class: 'form-control' %>
+        <br>
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>
