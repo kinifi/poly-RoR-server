@@ -1,7 +1,7 @@
 class PasswordResetController < ApplicationController
 
   def reset
-    user = User.find_by(email: params[:email].downcase)
+    user = User.find_by(email: params[:email])
     if user
       flash.now[:danger] = 'Password emailed to account' + user.email
     else
