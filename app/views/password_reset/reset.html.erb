@@ -4,6 +4,11 @@
     <br>
     <h1>Password Reset</h1>
     <br>
+    <% if user.errors.any? %>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    <% end %>
     <%= form_for(:reset, url: reset_path) do |f| %>
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
