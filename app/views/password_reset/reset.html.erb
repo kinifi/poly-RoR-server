@@ -4,7 +4,7 @@
     <br>
     <h1>Password Reset</h1>
     <br>
-    <%= form_for(@user, url: reset_path) do |f| %>
+    <%= form_for(@user, url: resetpassword_path) do |f| %>
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
       <%= f.submit "Email Password", class: "btn btn-primary" %>
