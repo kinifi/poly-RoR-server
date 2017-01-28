@@ -17,8 +17,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   #password reset
-  get '/reset', to: 'password_reset#new'
-  get '/resetpassword', to: 'password_reset#reset'
+  get '/reset', to: 'password_reset#reset'
 
   resources :users
   resources :polies

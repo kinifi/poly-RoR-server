@@ -17,7 +17,7 @@ class PasswordResetController < ApplicationController
                                  name: @user.name,
                                  password: @user.email
                                })
-       redirect_to_home_path
+       redirect_to_root_path
     else
       # Create an error message.
       flash.now[:danger] = 'Invalid Email'
