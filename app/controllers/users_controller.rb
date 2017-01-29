@@ -62,9 +62,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    respond_to do |format|
-      redirect_to home_path , notice: "Success"
-    end
+    redirect_to home_path , notice: "Success"
   end
 
   private
