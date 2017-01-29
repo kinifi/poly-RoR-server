@@ -20,3 +20,8 @@ This is a package manager made for game devs. Most game devs just want to easily
 Poly - a package that contains assets to be consumed in a game project.
 
 ---
+
+##Contributor
+In no specific order:
+* ManuelCostanzo
+* Kevin Knight
