@@ -25,3 +25,4 @@ Poly - a package that contains assets to be consumed in a game project.
 In no specific order:
 * ManuelCostanzo
 * Kevin Knight
+* Benny Peake
