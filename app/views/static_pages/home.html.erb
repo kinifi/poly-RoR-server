@@ -10,7 +10,7 @@
     </h5>
     <br>
     <%= form_tag('/search', :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Ex: unity, gamemaker, sprites", id: "searchbar" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar" %>
       <%= submit_tag "Search", :name => nil %>
     <% end %>
     <br>
