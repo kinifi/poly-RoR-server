@@ -26,3 +26,4 @@ In no specific order:
 * ManuelCostanzo
 * Kevin Knight
 * Benny Peake
+* Bret Hudson
