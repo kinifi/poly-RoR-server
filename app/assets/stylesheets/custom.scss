@@ -6,6 +6,11 @@ $gray-medium-light: #eaeaea;
 $white: #FFFFFF;
 $black: #000000;
 
+.nav li {
+	display: inline;
+	color: black;
+}
+
 #spacer {
   padding-top: 8%;
 }
