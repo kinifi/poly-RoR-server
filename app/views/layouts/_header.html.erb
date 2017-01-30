@@ -25,7 +25,6 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-      <%= link_to image_tag("gpmlogo.png", height: '32', width: '32'), home_path, id: "logo" %>
 				<ul class="nav navbar-nav">
           <!-- Create Poly should only show up if the user is logged in -->
           <% if logged_in? %>
@@ -47,6 +46,7 @@
           <% if logged_in? %>
             <li><%= link_to "Log out", logout_path, method: "delete" %></li>
           <% end %>
+          <li><%= link_to image_tag("gpmlogo.png", height: '32', width: '32'), home_path, id: "logo" %></li>
 				</ul>
 			</div>
 		</nav>
