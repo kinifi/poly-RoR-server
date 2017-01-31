@@ -6,10 +6,10 @@ $gray-medium-light: #eaeaea;
 $white: #FFFFFF;
 $black: #000000;
 
-.nav li {
-	display: inline;
+.navbar-inverse .navbar-nav > li > a {
 	color: black;
 }
+
 
 #spacer {
   padding-top: 8%;
