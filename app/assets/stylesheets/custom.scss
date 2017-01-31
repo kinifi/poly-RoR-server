@@ -10,9 +10,10 @@ $black: #000000;
     background-color: black;
 }
 
-// .navbar-inverse .navbar-toggle {
-// 	background-color: black;
-// }
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: white;
+}
+
 
 #spacer {
   padding-top: 8%;
