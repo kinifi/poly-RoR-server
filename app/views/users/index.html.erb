@@ -2,8 +2,8 @@
   <p id="notice"><%= notice %></p>
   <% if current_user.admin? && logged_in? %>
     <h1>Users</h1>
-    <div id="polytable">
-      <table>
+    <div>
+      <table id="polytable">
         <thead>
           <tr>
             <th>Name</th>
@@ -12,7 +12,6 @@
             <th colspan="3"></th>
           </tr>
         </thead>
-
         <tbody>
           <% @users.each do |user| %>
             <tr>
