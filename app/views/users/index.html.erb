@@ -2,8 +2,8 @@
   <p id="notice"><%= notice %></p>
   <% if current_user.admin? && logged_in? %>
     <h1>Users</h1>
-    <div id="polytable">
-      <table>
+    <div>
+      <table id="user_stable">
         <thead>
           <tr>
             <th>Name</th>
