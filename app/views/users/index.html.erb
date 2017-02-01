@@ -2,14 +2,12 @@
   <p id="notice"><%= notice %></p>
   <% if current_user.admin? && logged_in? %>
     <h1>Users</h1>
-    <div>
-      <table id="user_stable">
+    <div id="polytable">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
             <th>Email</th>
-            <!-- <th>Password</th>
-            <th>Passwordconfirmation</th> -->
             <th>Admin</th>
             <th colspan="3"></th>
           </tr>
@@ -20,8 +18,6 @@
             <tr>
               <td><%= user.name %></td>
               <td><%= user.email %></td>
-              <!-- <td><%= user.password %></td>
-              <td><%= user.passwordconfirmation %></td> -->
               <td><%= user.admin %></td>
               <td><%= link_to 'Show', user %></td>
               <td><%= link_to 'Edit', edit_user_path(user) %></td>
