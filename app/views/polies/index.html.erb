@@ -14,7 +14,6 @@
         </tr>
         <tr>
           <td id="website"><%= poly.description %></td>
-          <td id="website"><%= poly.updated_at %></td>
           <td id="website"><%= link_to 'Show Info', poly %></td>
           <!-- Only show these two options if you are logged in and an admin -->
           <% if logged_in? && current_user.admin %>
