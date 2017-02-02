@@ -10,19 +10,10 @@
     <%= image_tag("gpmlogo.png", height: '128', width: '128') %>
     <h2>Find the tools you need in one location</h2>
     <h5>Poly is a search engine for Game Dev specific code snippets, editors, full tools and more! Create Your Own Poly's and share them with others to find!</h5>
-    <h5>
-      <%= link_to "View Poly's Submitted By The Community", polies_path %>
-    </h5>
     <br>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <%= form_tag('/search', :method => "get") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar", class: "form-control" %>
-        <span class="input-group-btn">
-        <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-        </span>
-      <% end %>
-    </div>
+    <%= form_tag('/search', :method => "get") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar", class: "form-control" %>
+      <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+    <% end %>
   </div>
 </div>
