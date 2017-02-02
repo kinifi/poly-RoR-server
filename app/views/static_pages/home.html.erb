@@ -13,7 +13,7 @@
     <br>
     <%= form_tag('/search', :method => "get") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar" %>
-      <%= submit_tag "Search", :name => nil, class: "btn-default" %>
+      <%= submit_tag "Search", :name => nil %>
     <% end %>
   </div>
 </div>
