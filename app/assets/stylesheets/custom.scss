@@ -6,6 +6,10 @@ $gray-medium-light: #eaeaea;
 $white: #FFFFFF;
 $black: #000000;
 
+.input-group {
+  width: 100%
+}
+
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: black;
 }
@@ -29,8 +33,7 @@ $black: #000000;
 /* forms */
 
 #searchbar {
-  width: 50%;
-  height: 5%;
+  width: 80%;
 }
 
 #error_explanation {
