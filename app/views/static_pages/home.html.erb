@@ -14,17 +14,19 @@
       <%= link_to "View Poly's Submitted By The Community", polies_path %>
     </h5>
     <br>
-    <div class="col-lg-6">
-      <div class="input-group">
-        <%= form_tag('/search', :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar", class: "form-control" %>
-          <span class="input-group-btn">
-          <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-          </span>
-        <% end %>
-      </div>
+
+  </div>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <%= form_tag('/search', :method => "get") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar", class: "form-control" %>
+        <span class="input-group-btn">
+        <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+        </span>
+      <% end %>
     </div>
   </div>
+
 </div>
 
 <div class="col-lg-6">
