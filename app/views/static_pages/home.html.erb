@@ -15,10 +15,10 @@
     </h5>
     <br>
     <%= form_tag('/search', :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar", class: "form-control input-lg" %>
-      <button class="btn btn-info btn-lg" type="button">
-      <%= submit_tag "Search", :name => nil %>
-      </button>
+      <%= text_field_tag :search, params[:search], placeholder: "Ex: tween, voxel, sprites, gamemaker, unity", id: "searchbar", class: "form-control" %>
+      <span class="input-group-btn">
+      <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+      </span>
     <% end %>
     <br>
     <div class="row">
